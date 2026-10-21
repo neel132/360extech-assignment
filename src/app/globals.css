@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f4f4f1;
+  --panel: #fcfcfb;
+  --ink: #0b0b0b;
+  --ink-2: #52514e;
+  --muted: #7a7974;
+  --line: #e3e2dc;
+  --s1: #2a78d6; /* distribution / counts */
+  --s2: #eb6834; /* diabetes rate */
+  --s3: #1baf7a;
+  --s4: #eda100;
+  --s5: #e87ba4;
+  --good: #1a7f37;
+  --warn: #9a6700;
+  --bad: #c62828;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111110;
+    --panel: #1a1a19;
+    --ink: #f0efec;
+    --ink-2: #c3c2b7;
+    --muted: #8f8e86;
+    --line: #2e2e2b;
+    --s1: #3987e5;
+    --s2: #d95926;
+    --s3: #199e70;
+    --s4: #c98500;
+    --s5: #d55181;
+    --good: #3fb950;
+    --warn: #d29922;
+    --bad: #f06a6a;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-s1: var(--s1);
+  --color-s2: var(--s2);
+  --color-good: var(--good);
+  --color-warn: var(--warn);
+  --color-bad: var(--bad);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.prose-chat table { border-collapse: collapse; margin: 0.5rem 0; font-size: 0.875rem; display: block; overflow-x: auto; }
+.prose-chat th, .prose-chat td { border: 1px solid var(--line); padding: 0.25rem 0.6rem; text-align: left; font-variant-numeric: tabular-nums; }
+.prose-chat th { background: var(--bg); font-weight: 600; }
+.prose-chat p { margin: 0.4rem 0; }
+.prose-chat ul { list-style: disc; padding-left: 1.25rem; margin: 0.4rem 0; }
+.prose-chat ol { list-style: decimal; padding-left: 1.25rem; margin: 0.4rem 0; }
+.prose-chat strong { font-weight: 600; }
+.prose-chat code { font-family: var(--font-geist-mono); font-size: 0.85em; }
